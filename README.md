@@ -2,6 +2,7 @@
 Beanstalkd Alpine Docker File
 
 # Options
+```
 -b DIR   wal directory
 -f MS    fsync at most once every MS milliseconds (use -f0 for "always fsync")
 -F       never fsync (default)
@@ -16,3 +17,4 @@ Beanstalkd Alpine Docker File
 -v       show version information
 -V       increase verbosity
 -h       show this help
+```
