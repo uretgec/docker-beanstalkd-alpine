@@ -25,5 +25,5 @@ $ docker run -d -p 11300:11300 uretgec/docker-beanstalkd-alpine -v <docker_volum
 ```
 
 # Many many Thanks
-https://github.com/wealthworks/docker-beanstalkd
-https://github.com/rossedman/thin-docker/blob/master/beanstalkd/Dockerfile
+- https://github.com/wealthworks/docker-beanstalkd
+- https://github.com/rossedman/thin-docker/blob/master/beanstalkd/Dockerfile
