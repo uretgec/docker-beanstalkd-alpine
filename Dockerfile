@@ -8,8 +8,8 @@ RUN apk --update add --virtual build-dependencies \
   make \
   musl-dev \
   curl \
-  && curl -sL https://github.com/kr/beanstalkd/archive/v$version.tar.gz | tar xvz -C /tmp \
-  && cd /tmp/beanstalkd-$version \
+  && curl -sL https://github.com/kr/beanstalkd/archive/v$VERSION_BEANSTALKD.tar.gz | tar xvz -C /tmp \
+  && cd /tmp/beanstalkd-$VERSION_BEANSTALKD \
   && sed -i "s|#include <sys/fcntl.h>|#include <fcntl.h>|g" sd-daemon.c \
   && make \
   && cp beanstalkd /usr/bin \
