@@ -3,6 +3,9 @@ MAINTAINER Tuna Aras <iletisim@uretgec.com>
 
 ENV VERSION_BEANSTALKD="1.10"
 
+RUN addgroup -S beanstalkd && adduser -S -G beanstalkd beanstalkd
+RUN apk add --no-cache 'su-exec>=0.2'
+
 RUN apk --update add --virtual build-dependencies \
   gcc \
   make \
@@ -16,9 +19,10 @@ RUN apk --update add --virtual build-dependencies \
   && apk del build-dependencies \
   && rm -rf /tmp/* \
   && rm -rf /var/cache/apk/*
-
+  
+RUN mkdir /data && chown beanstalkd:beanstalkd /data
 VOLUME ["/data"]
 EXPOSE 11300
 
-ENTRYPOINT ["beanstalkd", "-p", "11300", "-u", "nobody"]
+ENTRYPOINT ["beanstalkd", "-p", "11300", "-u", "beanstalkd"]
 CMD ["-b", "/data"]
