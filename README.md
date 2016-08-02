@@ -18,3 +18,8 @@ Beanstalkd Alpine Docker File
 -V       increase verbosity
 -h       show this help
 ```
+
+# Usage
+```
+$ docker run -d -p 11300:11300 uretgec/docker-beanstalkd-alpine -v <docker_volume_name>:/data
+```
