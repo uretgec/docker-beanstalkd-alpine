@@ -23,3 +23,7 @@ Beanstalkd Alpine Docker File
 ```
 $ docker run -d -p 11300:11300 uretgec/docker-beanstalkd-alpine -v <docker_volume_name>:/data
 ```
+
+# Many many Thanks
+https://github.com/wealthworks/docker-beanstalkd
+https://github.com/rossedman/thin-docker/blob/master/beanstalkd/Dockerfile
